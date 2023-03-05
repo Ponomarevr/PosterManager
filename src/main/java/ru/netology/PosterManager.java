@@ -28,9 +28,9 @@ public class PosterManager {
 
     public String[] findLast() {
         int lastLength;
-        if (limit < 10) {
-            lastLength = limit;
-        } else lastLength = 10;
+        if (films.length < limit) {
+            lastLength = films.length;
+        } else lastLength = limit;
 
         String[] last = new String[lastLength];
         for (int i = 0; i < lastLength; i++) {
@@ -38,6 +38,4 @@ public class PosterManager {
         }
         return last;
     }
-
-
 }
